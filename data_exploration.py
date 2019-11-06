@@ -7,6 +7,10 @@ sns.set_style('white')
 data = pd.read_csv('merged.txt', sep=',')
 data.set_index('date', inplace=True)
 
+# Time Series plot with all the equities
+data.plot()
+plt.show()
+
 # Shows the individual time series for each equity
 for item in data.columns:
     data[item].plot()
