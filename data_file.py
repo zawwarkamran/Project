@@ -1,5 +1,6 @@
 import pandas as pd
 from alpha_vantage.timeseries import TimeSeries
+from functools import reduce
 # We can pull technical indicators as well from alpha_vantage using alpha_vantage.technicalindicators
 
 # The equities we want
