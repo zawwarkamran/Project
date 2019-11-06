@@ -16,7 +16,7 @@ ts = TimeSeries(key, output_format='pandas')
 # aapl_data, aapl_meta_data = ts.get_daily(symbol='AAPL', outputsize='full')
 stocks = {}
 for equity in tickers:
-    stocks[equity] = ts.get_daily(outputsize='compact', symbol=equity)[0]
+    stocks[equity] = ts.get_intraday(outputsize='full', symbol=equity)[0]
 
 # We want to keep the close prices only so the following chunk of code makes one pandas dataframe with just the closing
 # prices of all of the equities with their name. We can reset the index once we call merged.txt and set index to date to
