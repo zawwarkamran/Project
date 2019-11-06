@@ -9,6 +9,7 @@ data.set_index('date', inplace=True)
 
 # Time Series plot with all the equities
 data.plot()
+plt.ylabel('Price')
 plt.show()
 
 # Shows the individual time series for each equity
