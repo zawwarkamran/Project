@@ -27,7 +27,6 @@ for key, item in stocks.items():
     for name in item.columns:
         if name != '4. close':
             item = item.drop(name, axis=1)
-    item = item.rename(columns={'4. close': key})
-    data_lst.append(item.reset_index())
+    data_lst.append(item.rename(columns={'4. close': key}).reset_index())
 df_merged = reduce(lambda left, right: pd.merge(left, right, on=['date'], how='outer'), data_lst).fillna(0)
 df_merged.to_csv('merged.txt', sep=',', na_rep='.', index=False)
