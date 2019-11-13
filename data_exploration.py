@@ -24,5 +24,9 @@ for item in data.columns:
 sns.heatmap(data.corr(), cmap='coolwarm', annot=True)
 plt.show()
 
-sns.pairplot(data, diag_kind='kde')
+sns.pairplot(data)
+plt.show()
+
+(data['FB'] - data['MSFT']).plot()
+plt.title('Spread between facebook and microsoft')
 plt.show()
