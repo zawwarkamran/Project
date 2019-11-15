@@ -26,7 +26,3 @@ plt.show()
 
 sns.pairplot(data)
 plt.show()
-
-(data['FB'] - data['MSFT']).plot()
-plt.title('Spread between facebook and microsoft')
-plt.show()
